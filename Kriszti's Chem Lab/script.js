@@ -5,7 +5,8 @@ const aboutTitle = document.getElementById('about-title');
 const aboutText = document.getElementById('about-text');
 const aboutText2 = document.getElementById('about-text-2');
 
-const languageLinks = document.querySelectorAll('.language-selector a');
+const languageLinks = document.querySelectorAll('.language-selector .language-link');
+const navigationLinks = document.querySelectorAll('nav .nav-link');
 
 const translations = {
   en: {
@@ -51,9 +52,13 @@ languageLinks.forEach(link => {
     const lang = e.target.dataset.lang;
     currentLanguage = lang;
     updateContent(lang);
-    document.querySelectorAll('.language-selector a').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('.language-selector .language-link').forEach(a => a.classList.remove('active'));
     e.target.classList.add('active');
   });
+});
+
+navigationLinks.forEach(link => {
+  link.style.color = 'white';
 });
 
 updateContent(currentLanguage);

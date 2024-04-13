@@ -112,3 +112,28 @@ footer {
   background-color: #9c27b0;
   font-size: 1.1rem;
 }
+
+/* Language selector */
+.language-selector {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-selector a {
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.language-selector a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-selector a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

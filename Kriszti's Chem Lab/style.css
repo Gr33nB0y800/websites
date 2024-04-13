@@ -178,6 +178,8 @@ nav .nav-link:hover {
 
 /* ... (existing CSS styles) ... */
 
+/* ... (existing CSS styles) ... */
+
 /* Discography styles */
 .discography {
   padding: 3rem;
@@ -221,14 +223,35 @@ nav .nav-link:hover {
   transition: transform 0.3s ease;
 }
 
-.album-link:hover .vinyl {
-  transform: rotate(360deg);
+.vinyl.spin {
+  animation: spin 1s linear infinite;
 }
 
-.album h3 {
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.album-title {
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .album-info {
   font-size: 1.2rem;
+}
+
+.pre-order-btn {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pre-order-btn:hover {
+  background-color: #8e44ad;
 }

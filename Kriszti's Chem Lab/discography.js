@@ -19,8 +19,8 @@ vinylIcon.addEventListener('click', () => {
   }
 });
 
-albumTitle.addEventListener('click', () => {
-  window.location.href = 'https://krisztichemlabstore.com';
+albumTitle.addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default link behavior
 });
 
 preOrderBtn.addEventListener('click', () => {
